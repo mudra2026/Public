@@ -1,0 +1,43 @@
+@model PurviEnterprises.Models.EnquiryViewModel
+@{
+    ViewData["Title"] = "Contact and Enquiry";
+}
+
+<section class="page-hero page-hero-contact">
+    <div class="container page-hero-content">
+        <p class="section-label">GET IN TOUCH</p>
+        <h1>Let’s build something<br />great together.</h1>
+        <p>Tell us what you are planning. We will get back to you shortly.</p>
+    </div>
+</section>
+
+<section class="contact-section contact-page-section">
+    <div class="container contact-page-grid">
+        <div class="contact-details contact-page-details">
+            <div class="contact-item"><span>PHONE</span><a href="tel:9987802727">9987802727</a></div>
+            <div class="contact-item"><span>WHATSAPP</span><a href="https://wa.me/919987802727" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            <div class="contact-item"><span>EMAIL</span><a href="mailto:kdattaaatray@gmail.com">kdattaaatray@gmail.com</a></div>
+            <div class="contact-item"><span>LOCATION</span><p>Kharghar, Sector 12 - 410210</p></div>
+            <div class="qr-block"><span>SCAN TO CHAT</span><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fwa.me%2F919987802727" alt="QR code to chat on WhatsApp" /></div>
+        </div>
+        <div class="enquiry-panel">
+            @if (TempData["EnquirySubmitted"] is string confirmation)
+            {
+                <div class="form-success" role="status">@confirmation</div>
+            }
+            <form asp-action="Contact" method="post">
+                <div asp-validation-summary="ModelOnly" class="form-errors"></div>
+                <div class="form-field"><label asp-for="Name"></label><input asp-for="Name" autocomplete="name" /><span asp-validation-for="Name"></span></div>
+                <div class="form-field"><label asp-for="Phone"></label><input asp-for="Phone" autocomplete="tel" /><span asp-validation-for="Phone"></span></div>
+                <div class="form-field"><label asp-for="Email"></label><input asp-for="Email" autocomplete="email" /><span asp-validation-for="Email"></span></div>
+                <div class="form-field"><label asp-for="Service"></label><select asp-for="Service"><option value="">Select a service</option><option>Building Construction</option><option>RCC Work</option><option>Flooring Work</option><option>Waterproofing</option><option>Painting and Finishing</option><option>Renovation and Repair</option><option>Compound or Boundary Wall</option><option>Cold Room Installation</option><option>HVAC Installation</option><option>Electrical Work</option><option>POP Work</option><option>Furniture Work</option><option>Complete Interior Work</option></select><span asp-validation-for="Service"></span></div>
+                <div class="form-field"><label asp-for="Message"></label><textarea asp-for="Message" rows="5" placeholder="Tell us about your space, timeline or requirements"></textarea><span asp-validation-for="Message"></span></div>
+                <button class="btn-primary form-submit" type="submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

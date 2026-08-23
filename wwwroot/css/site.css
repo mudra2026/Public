@@ -1,0 +1,1012 @@
+/* =========================
+   PURVI ENTERPRISES
+   MAIN WEBSITE STYLES
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1c1c1c;
+    background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 720px;
+    position: relative;
+
+    background-image:
+        url('/civil.png');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.62);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    width: min(850px, 90%);
+    margin-left: 8%;
+}
+
+.hero-small {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.98;
+    margin: 0 0 30px;
+    font-weight: 800;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-whatsapp {
+    display: inline-block;
+    padding: 16px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #d99b35;
+    color: white;
+}
+
+.btn-whatsapp {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-section {
+    padding: 110px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.section-label {
+    color: #b57a1d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.about-section h2,
+.section-heading h2,
+.contact-section h2 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.about-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.experience-box {
+    background: #f4efe7;
+    padding: 55px;
+    text-align: center;
+}
+
+.experience-box span {
+    font-size: 80px;
+    font-weight: 800;
+    color: #b57a1d;
+}
+
+.experience-box p {
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* =========================
+   SERVICES
+   ========================= */
+
+.services-section {
+    background: #f7f7f7;
+    padding: 110px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+    line-height: 1.7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    min-height: 280px;
+    border-bottom: 4px solid #d99b35;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.service-number {
+    color: #b57a1d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin: 30px 0 15px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+.projects-section {
+    padding: 110px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+    background: #ddd;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.06);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 30px;
+
+    color: white;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.85)
+    );
+}
+
+.project-info span {
+    font-size: 13px;
+}
+
+.project-info h3 {
+    font-size: 28px;
+    margin: 8px 0 0;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+   ========================= */
+
+.why-section {
+    padding: 110px 0;
+    background: #1c1c1c;
+    color: white;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+.why-grid h3 {
+    color: #d99b35;
+    font-size: 18px;
+}
+
+.why-grid h4 {
+    font-size: 21px;
+}
+
+.why-grid p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-section {
+    padding: 110px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+}
+
+.contact-section p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.contact-details {
+    border-left: 2px solid #d99b35;
+    padding-left: 35px;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-item span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.contact-item a {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #333;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        margin-left: 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        height: 320px;
+    }
+
+    .about-section,
+    .services-section,
+    .projects-section,
+    .why-section,
+    .contact-section {
+        padding: 75px 0;
+    }
+}
+/* =========================
+   PURVI ENTERPRISES NAVBAR
+   ========================= */
+
+.pe-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    padding: 22px 0;
+
+    background: transparent;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.pe-nav-container {
+    width: min(1180px, 90%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.pe-logo {
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    line-height: 1;
+}
+
+.pe-logo span {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.pe-logo small {
+    font-size: 9px;
+    letter-spacing: 5px;
+
+    margin-top: 6px;
+
+    color: #d99b35;
+}
+
+
+/* NAVIGATION LINKS */
+
+.pe-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.pe-nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.pe-nav-links a:hover {
+    color: #d99b35;
+}
+
+
+/* GET QUOTE BUTTON */
+
+.pe-quote-button {
+    background: #d99b35;
+
+    color: white !important;
+
+    padding: 13px 22px;
+
+    border: 1px solid #d99b35;
+}
+
+.pe-quote-button:hover {
+    background: transparent;
+
+    border-color: white;
+
+    color: white !important;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.pe-menu-button {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+.pe-menu-button span {
+    display: block;
+
+    width: 28px;
+    height: 2px;
+
+    background: white;
+
+    margin: 6px 0;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.pe-footer {
+    background: #111;
+
+    color: white;
+
+    padding: 60px 0 25px;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid #333;
+}
+
+.footer-content h3 {
+    margin: 0 0 10px;
+
+    letter-spacing: 3px;
+}
+
+.footer-content p {
+    color: #999;
+}
+
+.footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-contact a {
+    color: #ddd;
+
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #d99b35;
+}
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .pe-navbar {
+        padding: 18px 0;
+    }
+
+    .pe-menu-button {
+        display: block;
+    }
+
+    .pe-nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        background: #111;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .pe-nav-links.active {
+        display: flex;
+    }
+
+    .pe-nav-links a {
+        font-size: 16px;
+    }
+
+    .pe-quote-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   DEDICATED PAGES + ENQUIRY
+   ========================= */
+
+:root {
+    --ink: #1c1c1c;
+    --muted: #666;
+    --gold: #d99b35;
+    --paper: #f7f5f1;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.pe-navbar {
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.page-hero {
+    min-height: 490px;
+    display: flex;
+    align-items: end;
+    position: relative;
+    color: white;
+    background-color: #242321;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(18, 18, 16, 0.84), rgba(18, 18, 16, 0.28));
+}
+
+.page-hero-about { background-image: url('/civil.png'); }
+.page-hero-services { background-image: url('/pop.png'); }
+.page-hero-projects { background-image: url('/furniture.png'); }
+.page-hero-contact { background-image: url('/electricity.png'); }
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 76px;
+    animation: rise-in 0.7s ease both;
+}
+
+.page-hero h1 {
+    font-size: clamp(44px, 7vw, 82px);
+    line-height: 1.02;
+    margin: 14px 0 18px;
+}
+
+.page-hero p:last-child {
+    max-width: 570px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e9e6df;
+}
+
+.about-detail-section,
+.contact-page-section {
+    padding: 110px 0;
+}
+
+.about-detail-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.about-detail-grid h2 {
+    font-size: clamp(35px, 4.4vw, 58px);
+    line-height: 1.1;
+    margin: 15px 0 28px;
+}
+
+.about-detail-grid p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-facts {
+    border-top: 2px solid var(--gold);
+}
+
+.about-facts div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-facts strong {
+    color: #b57a1d;
+    font-size: 40px;
+}
+
+.about-facts span {
+    color: var(--muted);
+    text-align: right;
+}
+
+.profile-section,
+.clients-section,
+.experts-section {
+    padding: 105px 0;
+}
+
+.profile-section {
+    background: var(--paper);
+}
+
+.profile-grid,
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+
+.profile-grid article {
+    border-top: 2px solid var(--gold);
+    padding-top: 24px;
+}
+
+.profile-grid h2,
+.business-grid h2 {
+    font-size: clamp(30px, 3.5vw, 46px);
+    line-height: 1.12;
+    margin: 14px 0 22px;
+}
+
+.profile-grid p:last-child,
+.business-grid p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.business-section {
+    padding: 105px 0;
+    background: #22221f;
+    color: white;
+}
+
+.business-grid > div:last-child p {
+    color: #c4c1b9;
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.clients-section {
+    background: #fff;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid #d9d5cd;
+    border-left: 1px solid #d9d5cd;
+}
+
+.clients-grid div {
+    min-height: 105px;
+    padding: 25px;
+    border-right: 1px solid #d9d5cd;
+    border-bottom: 1px solid #d9d5cd;
+    color: var(--ink);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.clients-grid small {
+    display: block;
+    margin-top: 7px;
+    color: #888;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.experts-section {
+    background: var(--paper);
+}
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.experts-grid article {
+    padding: 28px;
+    background: white;
+    border-top: 3px solid var(--gold);
+}
+
+.experts-grid article:nth-child(4),
+.experts-grid article:nth-child(5) {
+    grid-column: span 1;
+}
+
+.experts-grid span {
+    color: #9b6612;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.experts-grid h3 {
+    margin: 16px 0 10px;
+    font-size: 24px;
+}
+
+.experts-grid p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.services-page-section { padding-top: 110px; }
+.services-page-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.services-page-grid .service-card { min-height: 330px; padding: 42px; }
+.service-card h2 { font-size: 32px; margin: 24px 0 15px; }
+.text-link { color: #9b6612; font-weight: 700; text-decoration: none; }
+.text-link::after { content: '  ->'; }
+
+.service-scope {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    margin-top: 90px;
+    padding-top: 65px;
+    border-top: 1px solid #d9d5cd;
+}
+
+.scope-intro h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    margin: 14px 0 20px;
+}
+
+.scope-intro p:last-child {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.scope-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
+    border-top: 2px solid var(--gold);
+}
+
+.scope-list div {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    padding: 19px 0;
+    border-bottom: 1px solid #d9d5cd;
+}
+
+.scope-list strong {
+    color: #b57a1d;
+    font-size: 12px;
+}
+
+.scope-list span {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.scope-list small {
+    grid-column: 2;
+    margin-top: 5px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.gallery-page-section { padding-top: 110px; }
+.gallery-page-section .project-card { height: 460px; }
+.gallery-page-section .project-info h2 { font-size: 32px; margin: 8px 0 0; }
+
+.contact-page-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.contact-page-details { border-left: 0; border-top: 2px solid var(--gold); padding: 28px 0 0; }
+.enquiry-panel { background: var(--paper); padding: 42px; }
+.form-field { margin-bottom: 20px; }
+.form-field label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid #d6d1c8; background: #fff; padding: 14px 15px; font: inherit; color: var(--ink); }
+.form-field textarea { resize: vertical; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: 2px solid rgba(217, 155, 53, 0.35); border-color: var(--gold); }
+.field-validation-error, .form-errors { display: block; color: #a33b2f; font-size: 13px; margin-top: 6px; }
+.form-submit { border: 0; cursor: pointer; font: inherit; }
+.form-success { padding: 15px; margin-bottom: 22px; background: #e4f1e5; color: #205a2b; font-weight: 600; }
+.qr-block { margin-top: 35px; padding-top: 25px; border-top: 1px solid #ddd; }
+.qr-block span { display: block; color: #999; font-size: 12px; letter-spacing: 2px; margin-bottom: 14px; }
+.qr-block img { width: 160px; height: 160px; display: block; }
+
+@keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 900px) {
+    .about-detail-grid, .contact-page-grid, .profile-grid, .business-grid { grid-template-columns: 1fr; gap: 55px; }
+    .experts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .page-hero { min-height: 450px; }
+    .page-hero-content { padding-bottom: 55px; }
+    .page-hero h1 { font-size: 46px; }
+    .services-page-grid { grid-template-columns: 1fr; }
+    .clients-grid { grid-template-columns: repeat(2, 1fr); }
+    .experts-grid { grid-template-columns: 1fr; }
+    .service-scope { grid-template-columns: 1fr; gap: 35px; margin-top: 65px; padding-top: 45px; }
+    .scope-list { grid-template-columns: 1fr; }
+    .services-page-grid .service-card { min-height: 0; padding: 32px 26px; }
+    .enquiry-panel { padding: 26px 20px; }
+    .gallery-page-section .project-card { height: 340px; }
+}

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: purvi-enterprises
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: Smtp__Host
+        sync: false
+      - key: Smtp__Port
+        value: "587"
+      - key: Smtp__Username
+        sync: false
+      - key: Smtp__Password
+        sync: false
+      - key: Smtp__OwnerEmail
+        value: kdattaaatray@gmail.com
+      - key: Smtp__EnableSsl
+        value: "true"

@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Purvi Enterprises</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PurviEnterprises.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION BAR
+         ========================= -->
+
+    <header>
+
+        <nav class="pe-navbar">
+
+            <div class="pe-nav-container">
+
+                <!-- Logo / Company Name -->
+
+                <a class="pe-logo"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <span>PURVI</span>
+                    <small>ENTERPRISES</small>
+
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button class="pe-menu-button"
+                        type="button"
+                        onclick="toggleMenu()">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- Navigation Links -->
+
+                <div class="pe-nav-links" id="peNavLinks">
+
+                    <a asp-area=""
+                       asp-controller="Home"
+                       asp-action="Index">
+                        Home
+                    </a>
+
+                    <a asp-controller="Home" asp-action="About">
+                        About
+                    </a>
+
+                    <a asp-controller="Home" asp-action="About" asp-fragment="clients">
+                        Clients
+                    </a>
+
+                    <a asp-controller="Home" asp-action="About" asp-fragment="experts">
+                        Expert Opinion
+                    </a>
+
+                    <a asp-controller="Home" asp-action="Services">
+                        Services
+                    </a>
+
+                    <a asp-controller="Home" asp-action="Projects">
+                        Projects
+                    </a>
+
+                    <a asp-controller="Home" asp-action="Contact">
+                        Contact
+                    </a>
+
+                    <a asp-controller="Home" asp-action="Contact"
+                       class="pe-quote-button">
+                        Get a Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PAGE CONTENT
+         ========================= -->
+
+    <main role="main">
+
+        @RenderBody()
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="pe-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>PURVI ENTERPRISES</h3>
+
+                    <p>
+                        Civil • Electrical • POP • Furniture
+                    </p>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <a href="tel:9987802727">
+                        📞 9987802727
+                    </a>
+
+                    <a href="https://wa.me/919987802727"
+                       target="_blank">
+                        💬 WhatsApp
+                    </a>
+
+                    <a href="mailto:kdattaaatray@gmail.com">
+                        ✉ Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Purvi Enterprises. All Rights Reserved.
+                </p>
+
+                <p>
+                    Kharghar, Sector 12 - 410210
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         SCRIPTS
+         ========================= -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
