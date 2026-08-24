@@ -67,6 +67,8 @@ public class HomeController : Controller
         await _emailService.NotifyOwnerAsync(enquiry);
 
         TempData["EnquirySubmitted"] = "Thank you. We will contact you shortly.";
+        var whatsappMessage = $"New enquiry from {enquiry.Name}\nPhone: {enquiry.Phone}\nEmail: {enquiry.Email}\nService: {enquiry.Service}\nDetails: {enquiry.Message}";
+        TempData["WhatsAppLink"] = $"https://wa.me/919987802727?text={Uri.EscapeDataString(whatsappMessage)}";
         return RedirectToAction(nameof(Contact));
     }
 

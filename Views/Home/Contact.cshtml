@@ -24,6 +24,10 @@
             @if (TempData["EnquirySubmitted"] is string confirmation)
             {
                 <div class="form-success" role="status">@confirmation</div>
+                @if (TempData["WhatsAppLink"] is string whatsappLink)
+                {
+                    <a class="btn-whatsapp" href="@whatsappLink" target="_blank" rel="noopener">Send enquiry on WhatsApp</a>
+                }
             }
             <form asp-action="Contact" method="post">
                 <div asp-validation-summary="ModelOnly" class="form-errors"></div>
