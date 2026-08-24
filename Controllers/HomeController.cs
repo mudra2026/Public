@@ -66,10 +66,9 @@ public class HomeController : Controller
         await System.IO.File.WriteAllTextAsync(inboxPath, JsonSerializer.Serialize(enquiries, new JsonSerializerOptions { WriteIndented = true }));
         await _emailService.NotifyOwnerAsync(enquiry);
 
-        TempData["EnquirySubmitted"] = "Thank you. We will contact you shortly.";
         var whatsappMessage = $"New enquiry from {enquiry.Name}\nPhone: {enquiry.Phone}\nEmail: {enquiry.Email}\nService: {enquiry.Service}\nDetails: {enquiry.Message}";
-        TempData["WhatsAppLink"] = $"https://wa.me/919653270296?text={Uri.EscapeDataString(whatsappMessage)}";
-        return RedirectToAction(nameof(Contact));
+        var whatsappLink = $"https://wa.me/919653270296?text={Uri.EscapeDataString(whatsappMessage)}";
+        return Redirect(whatsappLink);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
