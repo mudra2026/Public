@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: purvi-enterprises
+    name: tulika-enterprises
     runtime: docker
     plan: free
     healthCheckPath: /
@@ -14,6 +14,6 @@ services:
       - key: Smtp__Password
         sync: false
       - key: Smtp__OwnerEmail
-        value: kdattaaatray@gmail.com
+        value: mudrakamble5@gmail.com
       - key: Smtp__EnableSsl
         value: "true"
