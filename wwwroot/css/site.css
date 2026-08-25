@@ -698,9 +698,10 @@ h1, h2, h3, h4 {
 }
 
 .page-hero {
-    min-height: 490px;
+    min-height: 560px;
+    padding-top: 145px;
     display: flex;
-    align-items: end;
+    align-items: center;
     position: relative;
     color: white;
     background-color: #242321;
@@ -727,7 +728,7 @@ h1, h2, h3, h4 {
 .page-hero-content {
     position: relative;
     z-index: 1;
-    padding-bottom: 76px;
+    padding-bottom: 24px;
     width: 100%;
     animation: rise-in 0.7s ease both;
 }
@@ -1002,8 +1003,8 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 600px) {
-    .page-hero { min-height: 450px; }
-    .page-hero-content { padding-bottom: 55px; }
+    .page-hero { min-height: 500px; padding-top: 125px; }
+    .page-hero-content { padding-bottom: 20px; }
     .page-hero h1 { font-size: clamp(38px, 10vw, 58px); }
     .page-hero h1 { font-size: 46px; }
     .services-page-grid { grid-template-columns: 1fr; }
