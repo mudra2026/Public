@@ -716,9 +716,11 @@ h1, h2, h3, h4 {
 }
 
 .page-hero-about { background-image: url('/civil.png'); }
-.page-hero-services { background-image: url('/pop.png'); }
-.page-hero-projects { background-image: url('/furniture.png'); }
-.page-hero-contact { background-image: url('/electricity.png'); }
+.page-hero-services,
+.page-hero-projects,
+.page-hero-contact {
+    background-image: linear-gradient(135deg, #102a43 0%, #1f4e5f 58%, #d99b35 160%);
+}
 
 .page-hero-content {
     position: relative;
