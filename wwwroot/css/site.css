@@ -715,7 +715,9 @@ h1, h2, h3, h4 {
     background: linear-gradient(90deg, rgba(18, 18, 16, 0.84), rgba(18, 18, 16, 0.28));
 }
 
-.page-hero-about { background-image: url('/civil.png'); }
+.page-hero-about {
+    background-image: linear-gradient(135deg, #102a43 0%, #1f4e5f 58%, #d99b35 160%);
+}
 .page-hero-services,
 .page-hero-projects,
 .page-hero-contact {
@@ -726,13 +728,15 @@ h1, h2, h3, h4 {
     position: relative;
     z-index: 1;
     padding-bottom: 76px;
+    width: 100%;
     animation: rise-in 0.7s ease both;
 }
 
 .page-hero h1 {
     font-size: clamp(44px, 7vw, 82px);
-    line-height: 1.02;
+    line-height: 1.12;
     margin: 14px 0 18px;
+    max-width: 780px;
 }
 
 .page-hero p:last-child {
@@ -1000,6 +1004,7 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
     .page-hero { min-height: 450px; }
     .page-hero-content { padding-bottom: 55px; }
+    .page-hero h1 { font-size: clamp(38px, 10vw, 58px); }
     .page-hero h1 { font-size: 46px; }
     .services-page-grid { grid-template-columns: 1fr; }
     .clients-grid { grid-template-columns: repeat(2, 1fr); }
